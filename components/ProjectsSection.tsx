@@ -3,29 +3,29 @@
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "AI Research Platform",
-      description: "Open-source framework for distributed machine learning research used by 1000+ researchers worldwide",
-      technologies: "Python, TensorFlow, Docker, Kubernetes",
-      date: "2024",
+      title: "QueryIQ",
+      description: "Intelligent SQL Query Optimization Engine managing the entire project from infrastructure design to code implementation. Developed ML pipeline to analyze and optimize query performance in real time, improving query execution times and database efficiency.",
+      technologies: "Python, SQL, Machine Learning, Database Optimization",
+      date: "Current",
       links: [
         { label: "GitHub", icon: "ri-github-line" },
         { label: "Demo", icon: "ri-external-link-line" }
       ]
     },
     {
-      title: "Neural Network Optimization Library",
-      description: "High-performance library for neural network optimization achieving 3x speedup over existing solutions",
-      technologies: "C++, CUDA, Python",
-      date: "2023",
+      title: "Sentience",
+      description: "ML-Native Programming Language created from scratch with custom lexer, parser, and interpreter. Features native machine learning and data analysis capabilities, streamlining data processing and enabling seamless AI model integration.",
+      technologies: "Compiler Design, Language Development, Machine Learning",
+      date: "2024",
       links: [
         { label: "GitHub", icon: "ri-github-line" },
         { label: "Documentation", icon: "ri-file-text-line" }
       ]
     },
     {
-      title: "Data Visualization Toolkit",
-      description: "Interactive visualization tools for large-scale data analysis with real-time processing capabilities",
-      technologies: "JavaScript, D3.js, WebGL, Node.js",
+      title: "EDAgent",
+      description: "Data Analysis Copilot - Interactive Streamlit application for automated Exploratory Data Analysis (EDA). Integrates Google Gemini GenAI via LangChain+LangGraph to generate dynamic data insights, visualizations, and reports from user-uploaded datasets.",
+      technologies: "Python, Streamlit, LangChain, LangGraph, Google Gemini",
       date: "2024",
       links: [
         { label: "GitHub", icon: "ri-github-line" },

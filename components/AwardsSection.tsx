@@ -29,31 +29,30 @@ export default function AwardsSection() {
   ];
 
   return (
-    <section id="awards" className="py-4">
-      <h2 className="text-2xl font-bold text-white mb-4">
-        Awards & Honors
-      </h2>
-      
-      <div className="space-y-3">
-        {awards.map((award, index) => (
-          <div key={index} className="space-y-1">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-              <h3 className="text-base font-bold text-white">
-                {award.title}
-              </h3>
-              <span className="text-gray-400 text-xs">
-                {award.year}
-              </span>
+    <div className="max-w-md mx-auto text-xs">
+      <section id="awards" className="py-2">
+        <h2 className="text-lg font-bold text-white mb-3">Awards & Honors</h2>
+        <div className="space-y-2">
+          {awards.map((award, index) => (
+            <div key={index} className="space-y-1 bg-gray-900/80 border border-gray-700/50 rounded-lg p-2 text-xs">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <h3 className="text-xs font-bold text-white">
+                  {award.title}
+                </h3>
+                <span className="text-gray-400 text-[10px]">
+                  {award.year}
+                </span>
+              </div>
+              <p className="text-gray-300 font-medium text-[10px]">
+                {award.organization}
+              </p>
+              <p className="text-gray-400 text-[10px]">
+                {award.description}
+              </p>
             </div>
-            <p className="text-gray-300 font-medium text-xs">
-              {award.organization}
-            </p>
-            <p className="text-gray-400 text-xs">
-              {award.description}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }

@@ -3,23 +3,14 @@
 export default function EducationSection() {
   const education = [
     {
-      institution: "[Stanford University], [Stanford, CA]",
-      dates: "[2012] - [2018]",
-      degree: "[Ph.D. in Computer Science]",
+      institution: "Mohammed VI International Academy of Civil Aviation",
+      location: "Casablanca, Morocco",
+      dates: "2019 - 2024",
+      degree: "Master of Engineering (MEng) in Computer Science",
       details: [
-        "[Dissertation: Advanced Machine Learning Algorithms for Complex Systems]",
-        "[Advisor: Prof. [Name]]",
-        "[GPA: 3.9/4.0]"
-      ]
-    },
-    {
-      institution: "[MIT], [Cambridge, MA]",
-      dates: "[2008] - [2012]",
-      degree: "[B.S. in Computer Science and Mathematics]",
-      details: [
-        "[Summa Cum Laude]",
-        "[Phi Beta Kappa Honor Society]",
-        "[Undergraduate Research in Artificial Intelligence]"
+        "Thesis: SQL finetuning data generation using Large Language Models. In collaboration with Oracle Labs",
+        "Education: 2 years in Preparatory Classes (Technology & Industrial Science option)",
+        "Specialized in machine learning, database systems, and AI research"
       ]
     }
   ];
@@ -34,11 +25,16 @@ export default function EducationSection() {
         {education.map((edu, index) => (
           <div key={index}>
             <div className="space-y-2">
-              <h3 className="text-base font-bold text-white">
-                {edu.institution}
-              </h3>
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
+                <h3 className="text-base font-bold text-white">
+                  {edu.institution}
+                </h3>
+                <span className="text-gray-400 text-xs">
+                  {edu.dates}
+                </span>
+              </div>
               <p className="text-gray-400 text-xs">
-                {edu.dates}
+                {edu.location}
               </p>
               <p className="text-gray-300 font-medium text-xs">
                 {edu.degree}

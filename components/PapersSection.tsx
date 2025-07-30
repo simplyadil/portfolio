@@ -25,38 +25,28 @@ export default function PapersSection() {
   ];
 
   return (
-    <section id="papers" className="py-2 text-xs">
-      <h2 className="text-xl font-semibold text-white mb-2">
-        Published Papers
-        </h2>
-      <div className="space-y-4">
-        {papers.map((paper, index) => (
-          <div key={index}>
-            <div className="space-y-1">
-              <h3 className="text-base font-bold text-white">
-                {paper.title}
-              </h3>
-              <p className="text-gray-300 text-xs">
-                {paper.authors}
-              </p>
-              <p className="text-gray-400 text-xs">
-                {paper.venue}
-              </p>
-              <div className="flex space-x-2 mt-1">
-                <button className="bg-gray-700/50 hover:bg-gray-600/50 border border-gray-600/50 hover:border-blue-400/50 text-blue-400 hover:text-blue-300 transition-all duration-200 px-2 py-1 rounded-lg text-xs cursor-pointer whitespace-nowrap">
-                  [PDF]
-                </button>
-                <button className="bg-gray-700/50 hover:bg-gray-600/50 border border-gray-600/50 hover:border-blue-400/50 text-blue-400 hover:text-blue-300 transition-all duration-200 px-2 py-1 rounded-lg text-xs cursor-pointer whitespace-nowrap">
-                  [BibTeX]
-                </button>
+    <div className="max-w-md mx-auto text-xs">
+      <section id="papers" className="py-2">
+        <h2 className="text-lg font-bold text-white mb-3">Published Papers</h2>
+        <div className="space-y-2">
+          {papers.map((paper, index) => (
+            <div key={index} className="bg-gray-900/80 border border-gray-700/50 rounded-lg p-2 text-xs">
+              <div className="space-y-1">
+                <h3 className="text-xs font-bold text-white">{paper.title}</h3>
+                <p className="text-gray-300 text-[10px]">{paper.authors}</p>
+                <p className="text-gray-400 text-[10px]">{paper.venue}</p>
+                <div className="flex space-x-1 mt-1">
+                  <button className="bg-gray-700/50 hover:bg-gray-600/50 border border-gray-600/50 hover:border-blue-400/50 text-blue-400 hover:text-blue-300 transition-all duration-200 px-2 py-0.5 rounded-lg text-[10px] cursor-pointer whitespace-nowrap">[PDF]</button>
+                  <button className="bg-gray-700/50 hover:bg-gray-600/50 border border-gray-600/50 hover:border-blue-400/50 text-blue-400 hover:text-blue-300 transition-all duration-200 px-2 py-0.5 rounded-lg text-[10px] cursor-pointer whitespace-nowrap">[BibTeX]</button>
+                </div>
               </div>
+              {index < papers.length - 1 && (
+                <hr className="mt-2 border-gray-700" />
+              )}
             </div>
-            {index < papers.length - 1 && (
-              <hr className="mt-4 border-gray-700" />
-            )}
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }

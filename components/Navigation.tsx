@@ -44,7 +44,11 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 text-[11px]">
+    <nav
+      className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 text-[11px] transition-all duration-500
+        ${activeSection === 'home' ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'}
+      `}
+    >
       <div className="bg-gray-800/30 backdrop-blur-lg border border-gray-600/30 rounded-full px-4 py-2 shadow-xl">
         <div className="flex items-center space-x-4">
           {sections.map(({ id, icon, label }) => {

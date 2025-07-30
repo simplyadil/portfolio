@@ -2,7 +2,6 @@
 
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
-import PapersSection from '../components/PapersSection'; // You no longer use this, can delete
 import ExperienceSection from '../components/ExperienceSection';
 import EducationSection from '../components/EducationSection';
 import AwardsSection from '../components/AwardsSection';
@@ -11,8 +10,17 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-gray-100 font-sans pb-24">
-      <main className="max-w-4xl mx-auto px-8 py-12 space-y-16">
+    <div className="relative min-h-screen font-sans text-gray-100">
+      {/* 🔹 Background Image */}
+      <div
+      className="absolute inset-0 bg-cover bg-center z-0"
+      style={{ backgroundImage: "url('/blue_bg.jpg')" }}></div>
+
+      {/* 🔹 Optional overlay for readability */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-0" />
+
+      {/* 🔹 Main content */}
+      <main className="relative z-10 max-w-4xl mx-auto px-8 py-12 space-y-16">
         <Header />
         <div className="space-y-16">
 
@@ -38,10 +46,10 @@ export default function Home() {
 
         </div>
       </main>
-      
+
       <Footer />
       <Navigation />
-      
+
       <style jsx global>{`
         .gradient-border-card {
           position: relative;
@@ -51,7 +59,7 @@ export default function Home() {
           transition: all 0.3s ease;
           border: 2px solid rgba(55, 65, 81, 0.5);
         }
-        
+
         .gradient-border-card:hover {
           transform: translateY(-2px);
           box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
